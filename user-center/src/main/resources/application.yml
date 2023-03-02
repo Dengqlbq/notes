@@ -5,3 +5,12 @@ spring:
       username: root
       password: 12345678
       driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: user-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+server:
+  port: 8000
