@@ -28,6 +28,9 @@ feign:
   httpclient:
     max-connections: 30
     max-connections-per-route: 10
+  # feign整合sentinel后dashborad的资源名称中会带上微服务名
+  sentinel:
+    enabled: true
 
 logging:
   level:
