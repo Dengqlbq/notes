@@ -11,6 +11,10 @@ spring:
       nacos:
         discovery:
           server-addr: 127.0.0.1:8848
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
 
 server:
   port: 8010
@@ -28,3 +32,10 @@ feign:
 logging:
   level:
     com.deng.contentcenter.feignclient.UserCenterFeignClient: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
