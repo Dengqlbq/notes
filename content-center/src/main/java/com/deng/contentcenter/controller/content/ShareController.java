@@ -1,6 +1,6 @@
 package com.deng.contentcenter.controller.content;
 
-import com.deng.contentcenter.domain.dto.share.ShareDTO;
+import com.deng.contentcenter.domain.dto.content.ShareDTO;
 import com.deng.contentcenter.service.content.ShareService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.deng.contentcenter.domain.dto.share;
+package com.deng.contentcenter.domain.dto.content;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
