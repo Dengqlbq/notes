@@ -9,4 +9,6 @@ public interface ShareService {
     ShareDTO findById(Integer id);
 
     Share auditById(Integer id, ShareAuditDTO auditDTO);
+
+    void doAuditWithMQLog(Integer id, ShareAuditDTO auditDTO, String transactionId);
 }
