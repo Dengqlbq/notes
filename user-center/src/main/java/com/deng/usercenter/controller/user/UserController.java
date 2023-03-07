@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    private LoginResDTO login(@RequestBody UserLoginDTO loginDTO) {
+    public LoginResDTO login(@RequestBody UserLoginDTO loginDTO) {
         // 微信开发者工具没有linux版本，登录功能仅做模拟
         String openId = "fake open id";
 
