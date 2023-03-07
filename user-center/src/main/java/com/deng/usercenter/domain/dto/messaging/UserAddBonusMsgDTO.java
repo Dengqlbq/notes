@@ -1,4 +1,4 @@
-package com.deng.usercenter.domain.entity.user.dto.messaging;
+package com.deng.usercenter.domain.dto.messaging;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -4,7 +4,7 @@ import com.deng.usercenter.dao.bonus.BonusEventLogMapper;
 import com.deng.usercenter.dao.user.UserMapper;
 import com.deng.usercenter.domain.entity.bonus.BonusEventLog;
 import com.deng.usercenter.domain.entity.user.User;
-import com.deng.usercenter.domain.entity.user.dto.messaging.UserAddBonusMsgDTO;
+import com.deng.usercenter.domain.dto.messaging.UserAddBonusMsgDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
