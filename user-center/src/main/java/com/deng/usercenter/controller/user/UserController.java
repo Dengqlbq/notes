@@ -1,4 +1,5 @@
 package com.deng.usercenter.controller.user;
+import com.deng.usercenter.auth.CheckLogin;
 import com.deng.usercenter.domain.dto.user.JwtTokenResDTO;
 import com.deng.usercenter.domain.dto.user.LoginResDTO;
 import com.deng.usercenter.domain.dto.user.UserLoginDTO;
@@ -24,6 +25,7 @@ public class UserController {
     private final JwtOperator jwtOperator;
 
     @GetMapping("/{id}")
+    @CheckLogin
     public User findById(@PathVariable Integer id) {
         return this.userService.findById(id);
     }
