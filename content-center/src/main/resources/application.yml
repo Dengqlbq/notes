@@ -25,6 +25,9 @@ feign:
     config:
       user-center:
         logger-level: full
+      default:
+        requestInterceptors:
+          - com.deng.contentcenter.feignclient.interceptor.TokenRelayRequestInterceptor
   httpclient:
     max-connections: 30
     max-connections-per-route: 10
@@ -45,3 +48,7 @@ rocketmq:
   name-server: 127.0.0.1:9876
   producer:
     group: test-group
+
+jwt:
+  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
+  expire: 1209600
