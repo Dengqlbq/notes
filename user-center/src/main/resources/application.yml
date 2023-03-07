@@ -17,3 +17,7 @@ server:
 
 rocketmq:
   name-server: 127.0.0.1:9876
+
+jwt:
+  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
+  expire: 1209600
