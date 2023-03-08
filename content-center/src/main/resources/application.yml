@@ -11,7 +11,12 @@ spring:
   config:
     import:
       - optional:nacos:content-center-dev.yaml
-
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#    discovery-client-enabled: false
   cloud:
 #    sentinel:
 #      transport:

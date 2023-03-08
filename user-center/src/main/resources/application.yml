@@ -16,6 +16,13 @@ spring:
   config:
     import:
       - optional:nacos:user-center-dev.yaml
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#    discovery-client-enabled: false
+
 #server:
 #  port: 8000
 
