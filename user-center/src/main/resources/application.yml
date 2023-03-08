@@ -8,6 +8,9 @@ spring:
   application:
     name: user-center
   cloud:
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080
     nacos:
 #      discovery:
 #        server-addr: 127.0.0.1:8848
@@ -32,3 +35,9 @@ spring:
 #jwt:
 #  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
 #  expire: 1209600
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
