@@ -1,23 +1,27 @@
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/user_center
-    hikari:
-      username: root
-      password: 12345678
-      driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/user_center
+#    hikari:
+#      username: root
+#      password: 12345678
+#      driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: user-center
   cloud:
     nacos:
-      discovery:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+      config:
         server-addr: 127.0.0.1:8848
+  config:
+    import:
+      - optional:nacos:user-center-dev.yaml
+#server:
+#  port: 8000
 
-server:
-  port: 8000
+#rocketmq:
+#  name-server: 127.0.0.1:9876
 
-rocketmq:
-  name-server: 127.0.0.1:9876
-
-jwt:
-  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
-  expire: 1209600
+#jwt:
+#  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
+#  expire: 1209600

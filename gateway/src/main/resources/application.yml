@@ -1,23 +1,26 @@
-# gateway??nacos?????url?????????????????
-server:
-  port: 8020
+#server:
+#  port: 8020
 spring:
   application:
     name: gateway
   cloud:
     nacos:
-      discovery:
-        server-addr: localhost:8848
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  endpoint:
-    health:
-      show-details: always
+#      discovery:
+#        server-addr: localhost:8848
+      config:
+        server-addr: 127.0.0.1:8848
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+  config:
+    import:
+      - optional:nacos:gateway-dev.yaml
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  endpoint:
+#    health:
+#      show-details: always
