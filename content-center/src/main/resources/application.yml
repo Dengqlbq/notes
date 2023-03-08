@@ -48,6 +48,8 @@ spring:
 logging:
   level:
     com.deng.contentcenter.feignclient.UserCenterFeignClient: DEBUG
+    com.deng.contentcenter.dao.content: DEBUG
+
 
 #management:
 #  endpoints:
@@ -62,3 +64,7 @@ logging:
 #jwt:
 #  secret: LJxN8hH0ncEEyuxxMM6nOxVuzxSuXQ2ZQYQSRVnl1Z0nRC7jIwnVFN9HyT2lidpjnkxYqb
 #  expire: 1209600
+
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true

@@ -12,6 +12,8 @@ import com.deng.contentcenter.domain.entity.messaging.RocketmqTransactionLog;
 import com.deng.contentcenter.domain.enums.AuditStatusEnum;
 import com.deng.contentcenter.feignclient.UserCenterFeignClient;
 import com.deng.contentcenter.service.content.ShareService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import lombok.RequiredArgsConstructor;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.apache.rocketmq.spring.support.RocketMQHeaders;
@@ -21,6 +23,7 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -91,5 +94,12 @@ public class ShareServiceImpl implements ShareService {
                         .log(MQ_TRANSACTION_LOG_DO_AUDIT)
                         .build()
         );
+    }
+
+    @Override
+    public PageInfo<Share> query(String title, Integer page, Integer size) {
+        PageHelper.startPage(page, size);
+        List<Share> shares = this.shareMapper.selectByParam(title);
+        return new PageInfo<>(shares);
     }
 }
